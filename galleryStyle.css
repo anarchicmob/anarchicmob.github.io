@@ -1,0 +1,183 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes at least the full viewport height */
+    background-color: #fbf2e3;
+    margin: 0;
+    overflow-y: auto
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 40px;
+    background: transparent;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 90vh; /* Ensures it spans most of the height */
+    justify-content: space-between; /* Pushes the icons to the bottom */
+}
+
+.sidebar h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar h1 .logo {
+    width: 100px; /* 调整 Logo 大小 */
+    height: auto; /* 保持比例 */
+    border-radius: 50%; /* 可选：圆形 Logo */
+}
+
+
+.sidebar h1 a {
+    text-decoration: none;  /* Remove underline */
+    color: black;  /* Change color */
+    white-space: normal; /* 允许换行 */
+    word-wrap: break-word; /* 允许单词内换行 */
+    max-width: 100%;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    margin-top: 50px;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.sidebar nav ul li a.active {
+    font-weight: bold; /* 加粗字体 */
+}
+
+/* 子页面样式 */
+/* 子页面样式 */
+.sidebar nav ul li:nth-child(2) a, /* Festival Dobby! */
+.sidebar nav ul li:nth-child(3) a { /* Dining with Dobby */
+    margin-left: 20px; /* 句首缩进 */
+    font-style: italic;
+    font-size: 0.9rem; /* 字体更小 */
+    color: #403e3e; /* 子页面文字颜色 */
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li:nth-child(2) a:hover,
+.sidebar nav ul li:nth-child(3) a:hover {
+    color: #fbc66b; /* 鼠标悬停时文字颜色变深 */
+}
+
+.icons {
+    margin-top: auto
+}
+
+.icons img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.content {
+    margin-left: 20%; /* Adjust this value based on the width of the sidebar */
+    padding: 20px;
+}
+
+.title-container {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between title and subtitle */
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.title {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 副标题 */
+.subtitle {
+    font-style: italic;
+    color: #555;
+}
+
+
+/* Main Content */
+.main-content {
+    width: 100%;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 两列，每列宽度相等 */
+    gap: 50px; /* 图片之间的间隙 */
+    max-width: 900px; /* 限制容器最大宽度 */
+    margin: 0 auto; /* 水平居中 */
+}
+
+.image-container {
+    display: contents; /* Allow grid to handle layout */
+}
+
+.photo {
+    text-align: center;
+    aspect-ratio: 1 / 1;
+}
+
+.photo img {
+    width: 88%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.caption {
+    margin-top: 10px; /* Space between image and caption */
+    color: #777;
+    font-style: italic;
+}
+
+/* 最后一个image-container要加margin-bottom！ */
